@@ -49,3 +49,6 @@ dist/
 .vscode/
 .idea/
 *.swp
+
+# google cloud credentials
+newssearch-480809-e63a08f6435d.json
