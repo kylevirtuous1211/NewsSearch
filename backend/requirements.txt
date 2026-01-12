@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+google-cloud-firestore
+sentence-transformers
+vaderSentiment
+feedparser
+requests
+python-multipart
