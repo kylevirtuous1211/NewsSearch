@@ -51,8 +51,8 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 # Verify Database Connection (Update path to your JSON key)
-export GOOGLE_APPLICATION_CREDENTIALS="../your-key-file.json"
-python db/init_db.py
+export GOOGLE_APPLICATION_CREDENTIALS="../service_account.json"
+python -m db.init_db
 
 # Run the Server
 python -m uvicorn main:app --reload

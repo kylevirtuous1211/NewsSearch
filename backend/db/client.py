@@ -45,13 +45,8 @@ class DatabaseFactory:
     async def shutdown(cls):
         if cls._instance:
             print("Closing Firestore Client connection...")
-            # close() method on AsyncClient closes the gRPC channel
-            # usage: await client.close() - usually it's a coroutine
             try:
-                # Check if close is a coroutine function or just a method
-                # It seems in google-cloud, close() is usually standard but AsyncClient might implicitly handle it.
-                # However, explicit close is good.
-                await cls._instance.close() 
+                cls._instance.close() 
             except Exception as e:
                 print(f"Error closing Firestore client: {e}")
             
